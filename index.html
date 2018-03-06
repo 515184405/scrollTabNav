@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>滚动切换tab</title>
+	<script type="text/javascript" src='../jquery.min.js'></script>
+    <script type="text/javascript" src='scrollTabNav.js'></script>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+        body{
+            font-family: "微软雅黑"
+        }
+        a{
+            color:#333;
+            text-decoration: none;
+        }
+		/*组委会列表*/
+		.t{ padding: 0px 20px 0px 20px; background:  #fafafa; font-size:18px; }
+		.t span{ border-right:none; color:#555; }
+		.zwh-nav{border-bottom: 1px solid #e7eaec;background: #fafafa;}
+		.zwh-nav td{height: 40px;line-height: 40px;}
+		.zwh-nav td a{display: block;background: #fafafa;text-align: center;font-size: 14px;border-right: 1px solid #e7eaec;}
+		.zwh-nav td:last-child a{border-right: none;}
+		.zwh-nav td a.on{background:#28a7e1;color:#fff;border-right:none;}
+		.zwh-nav.zwh-navfixed{box-shadow: 0px 1px 10px rgba(0,0,0,0.1);}
+        .flex{position: fixed;left: 0px;top: 0px;right: 0px;}
+		.zwh-nav.zwh-navfixed table{width: 1000px;margin: 0px auto;}
+		.box-list{
+			width:1004px;
+			margin:0 auto;
+			margin-top:100px;
+		}
+		.zwhfl{
+			padding: 15px;
+
+		}
+		.item-l{
+			line-height: 50px;
+		}
+	</style>
+	<script>
+        
+		$(document).ready(function(){  
+            
+            $(".zwh-nav td a").scrollTabNav({
+                navEle : $('.zwh-nav'), //导航的element
+                contentELe : $(".zwhfl"), //导航对应内容起点的element
+                navTargetAddClassName : 'on', //滚动到当前内容块，导航添加的类名
+                navEleFlexAddClassName : 'flex', //导航距离顶部为0时添加的类名
+                eventTarget : 'click' //默认事件为click
+            })
+
+        });
+        
+	</script>
+</head>
+<body> 
+        <div style='width:1004px;margin:0 auto;line-height: 45px;'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+		<div class="zwh-nav clearfix zwh-navfixed">
+            <table width="100%">
+                <tbody><tr>
+                        <td><a href="javascript:void(0)" class="scroll-link">全国学会/协会</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">地方学会/协会</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">学组或专业委员会</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">医疗服务机构</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">杂志社编辑部</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">会议服务公司</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">全国性旅行社</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">国际学会/协会</a></td>
+                        <td><a href="javascript:void(0)" class="scroll-link">医药企业</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="box-list">
+        	<div class="zwhfl" >
+                <span>全国学会/协会</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>地方学会/协会</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>学组或专业委员会</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>医疗服务机构</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>杂志社编辑部</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>会议服务公司</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>全国性旅行社</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>国际学会/协会</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+            </div>
+            <div class="zwhfl" >
+                <span>医药企业</span>
+            </div>
+            <div class="item-l">
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	lorem
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </div>
+</body>
+</html>
